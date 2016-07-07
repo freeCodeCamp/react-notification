@@ -67,4 +67,72 @@ describe('<NotificationStack />', () => {
 
     expect(handleDismiss.calledOnce).to.equal(false);
   });
+
+  it('barStyle factory should set correct style on notification', () => {
+    const styleFactory = (index, style) => Object.assign(
+      {},
+      style,
+      { bottom: `${index}px` }
+    );
+    const stack = mount(
+      <NotificationStack
+        notifications={[mockNotification]}
+        barStyle={styleFactory}
+        onDismiss={() => {}}
+      />
+    );
+    const notification = stack.find(Notification);
+    expect(notification.prop('barStyle').bottom).to.equal('0px');
+  });
+
+  it('barStyle factory should respect notification barStyle', () => {
+    const styleFactory = (index, style) => Object.assign(
+      {},
+      style,
+      { bottom: `${index}px` }
+    );
+    const stack = mount(
+      <NotificationStack
+        notifications={[mockNotification]}
+        barStyle={styleFactory}
+        onDismiss={() => {}}
+      />
+    );
+    const notification = stack.find(Notification);
+    expect(notification.prop('barStyle').background).to.equal('rgb(2, 2, 2)');
+  });
+
+  it('actionBarStyle factory should set correct style on notification', () => {
+    const styleFactory = (index, style) => Object.assign(
+      {},
+      style,
+      { bottom: `${index + 2}px` }
+    );
+    const stack = mount(
+      <NotificationStack
+        notifications={[mockNotification]}
+        activeBarStyle={styleFactory}
+        onDismiss={() => {}}
+      />
+    );
+    const notification = stack.find(Notification);
+    expect(notification.prop('activeBarStyle').bottom).to.equal('2px');
+  });
+
+  it('actionBarStyle factory should respect notification actionBarStyle', () => {
+    const styleFactory = (index, style) => Object.assign(
+      {},
+      style,
+      { bottom: `${index}px` }
+    );
+    const stack = mount(
+      <NotificationStack
+        notifications={[mockNotification]}
+        activeBarStyle={styleFactory}
+        onDismiss={() => {}}
+      />
+    );
+    const notification = stack.find(Notification);
+    expect(notification.prop('activeBarStyle').left).to.equal('4rem');
+  })
 });
