@@ -1,7 +1,20 @@
 {
-  "name": "react-notification",
-  "version": "5.0.6",
-  "description": "Snackbar style notification component for React.",
+  "name": "@freecodecamp/react-notification",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "freeCodeCamp <team@freecodecamp.org>",
+  "homepage": "https://github.com/freeCodeCamp/react-notification#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freeCodeCamp/react-notification.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeCodeCamp/react-notification/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "npm test && npm run build",
@@ -9,26 +22,6 @@
     "build": "`npm bin`/babel src -d dist",
     "test": "make test"
   },
-  "repository": {
-    "type": "git",
-    "url": "https+git://github.com/pburtchaell/react-notification"
-  },
-  "keywords": [
-    "react",
-    "component",
-    "react-component",
-    "components",
-    "ui",
-    "notify",
-    "notification",
-    "snackbar"
-  ],
-  "author": "Patrick Burtchaell <patrick@pburtchaell.com> (pburtchaell.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pburtchaell/react-notification/issues"
-  },
-  "homepage": "https://github.com/pburtchaell/react-notification",
   "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.2",

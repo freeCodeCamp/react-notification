@@ -28,7 +28,7 @@ var Notification = function (_Component) {
   function Notification(props) {
     _classCallCheck(this, Notification);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Notification).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this, props));
 
     _this.getBarStyle = _this.getBarStyle.bind(_this);
     _this.getActionStyle = _this.getActionStyle.bind(_this);
@@ -65,10 +65,10 @@ var Notification = function (_Component) {
     value: function getBarStyle() {
       if (this.props.style === false) return {};
 
-      var _props = this.props;
-      var isActive = _props.isActive;
-      var barStyle = _props.barStyle;
-      var activeBarStyle = _props.activeBarStyle;
+      var _props = this.props,
+          isActive = _props.isActive,
+          barStyle = _props.barStyle,
+          activeBarStyle = _props.activeBarStyle;
 
 
       var baseStyle = {

@@ -30,7 +30,7 @@ var StackedNotification = function (_Component) {
   function StackedNotification(props) {
     _classCallCheck(this, StackedNotification);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(StackedNotification).call(this, props));
+    var _this = _possibleConstructorReturn(this, (StackedNotification.__proto__ || Object.getPrototypeOf(StackedNotification)).call(this, props));
 
     _this.state = {
       isActive: false
